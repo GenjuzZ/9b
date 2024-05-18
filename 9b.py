@@ -8,7 +8,6 @@ class Agent:
         self.y = random.randint(0, world.size-1)
 
     def move(self):
-        # Find a new position, making sure it's empty
         while True:
             new_x = random.randint(0, self.world.size-1)
             new_y = random.randint(0, self.world.size-1)
@@ -28,7 +27,6 @@ def main():
     # Initialize the world with a 5x5 grid and 3 agents
     world = World(5, 3)
 
-    # Run 10 iterations of the simulation
     for step in range(10):
         print(f"Step {step}")
         for agent in world.agents:
